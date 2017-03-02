@@ -10,8 +10,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.junit.Assert.*;
 
@@ -37,5 +39,11 @@ public class ExampleInstrumentedTest {
     Context appContext = InstrumentationRegistry.getTargetContext();
 
     assertEquals("com.ecgreb.espresso101", appContext.getPackageName());
+  }
+
+  @Test public void onFabClick_shouldDisplaySnackbar() throws Exception {
+    onView(withId(R.id.fab)).perform(click());
+    onView(withText("Replace with your own action"))
+        .check(matches(isDisplayed()));
   }
 }

@@ -29,7 +29,7 @@ test:
 
 deployment:
   espresso:
-    branch: circle-ci
+    branch: master
     commands:
       - emulator -avd circleci-android22 -no-audio -no-window:
           background: true

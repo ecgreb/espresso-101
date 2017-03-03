@@ -25,7 +25,8 @@ test:
 
 deployment:
   espresso:
-    branch circle-ci:
+    branch: circle-ci
+    commands:
       - emulator -avd circleci-android22 -no-audio -no-window:
           background: true
           parallel: true

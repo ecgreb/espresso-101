@@ -30,7 +30,7 @@ public class ExampleInstrumentedTest {
 
   @Test
   public void shouldDisplayHelloWorld() {
-    onView(withText("Hello World!")).check(matches(isDisplayed()));
+    onView(withText("XXX")).check(matches(isDisplayed()));
   }
 
   @Test
